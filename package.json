@@ -5,9 +5,27 @@
   "devDependencies": {
     "jest": "^27.5.1"
   },
-
-
   "scripts": {
-    "test": "jest"
-  }
+    "test": "jest",
+    "start": "node index.js",
+    "reset": "node reset.js"
+  },
+  "name": "hw10teamprofile",
+  "description": "team profile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savieclarke/hw10teamprofile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/savieclarke/hw10teamprofile/issues"
+  },
+  "homepage": "https://github.com/savieclarke/hw10teamprofile#readme"
 }

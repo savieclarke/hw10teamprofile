@@ -1,19 +1,14 @@
-const Employee = require("./Employee");
+const Intern = require("../lib/Intern");
 
-class Intern extends Employee {
-  constructor(name, id, email, school) {
-    super(name, id, email);
-    this.school = school;
-  }
+test("Can set school via constructor", () => {
+  const testValue = "NYIT";
+  const e = new Intern("Foo", 1, "fake@email.com", testValue);
+  expect(e.school).toBe(testValue);
+});
 
-  getRole() {
-    return "Intern";
-  }
+test("getRole() should return \"Intern\"", () => {
+  const testValue = "Intern";
+  const e = new Intern("Foo", 1, "fake@email.com", "NYIT");
+  expect(e.getRole()).toBe(testValue);
+});
 
-  getSchool() {
-    return this.school;
-  }
-    
-}
-
-module.exports = Intern;

@@ -1,20 +1,15 @@
-const Employee = require("./Employee");
+const Manager = require("../lib/Manager");
+const Employee = require("../lib/Employee");
 
-class Manager extends Employee {
+test("Can set office number via constructor argument", () => {
+  const testValue = 100;
+  const e = new Manager("Foo", 1, "fake@email.com", testValue);
+  expect(e.officeNumber).toBe(testValue);
+});
 
-  constructor(name, id, email, officeNumber) {
-    super(name, id, email);
-    this.officeNumber = officeNumber;
-  }
 
-  getRole() {
-    return "Manager";
-  }
-
-  getOfficeNumber() {
-    return this.officeNumber;
-  }
-
-}
-
-module.exports = Manager;
+test("Can get office number via getOffice()", () => {
+  const testValue = 100;
+  const e = new Manager("Foo", 1, "fake@email.com", testValue);
+  expect(e.getOfficeNumber()).toBe(testValue);
+});
